@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Add
+{% endblock %}
+{% block content %}
+<center>
+<h3 class="mt-4">Add Movie Details-Built in</h3></center>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+{% endblock %}

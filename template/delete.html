@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <title>Delete Movie</title>
+
+    <h1>Delete Movie</h1>
+    <p>Are you sure you want to delete "{{ movie.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+{% endblock %}
+
+
+

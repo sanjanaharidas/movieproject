@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<center><h3 class="mt-4">Movie Titles</h3></center>
+<br>
+<div class="container">
+  <div class="row row-cols-4">
+    {% for movie in movies %}
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+         <img src="{{ movie.img.url }}" style="height:300px; width:100%;" class="card-img-top" alt="{{ movie.name }}">
+         <div class="card-body">
+           <h5 class="card-title">{{ movie.name }}</h5>
+           <p class="card-text">{{ movie.desc }}</p>
+           <p class="card-text">Year: {{ movie.year }}</p>
+           <a href="{% url 'store:viewmovie' movie.id %}" class="btn btn-primary">View</a>
+         </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
